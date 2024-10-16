@@ -2,12 +2,12 @@ $(document).ready(function() {
     $('#buscarProductoForm').on('submit', function(event) {
         event.preventDefault(); // Prevenir que se envíe el formulario de forma convencional
 
-        var nombre = $('#nombreProducto').val(); // Obtener el nombre del producto
+        var precio = $('#Precio').val(); // Obtener el valor del precio ingresado
 
         $.ajax({
             url: 'controller/buscar.php', // URL del script PHP
             type: 'GET',
-            data: { nombre: nombre }, // Pasar el nombre del producto como parámetro
+            data: { precio: precio }, // Pasar el precio como parámetro
             dataType: 'json',
             success: function(data) {
                 // Limpiar la tabla actual
@@ -23,7 +23,7 @@ $(document).ready(function() {
                             '<tr>' +
                             '<td>' + producto.Nombre + '</td>' +
                             '<td>' + producto.Precio + '</td>' +
-                            '<td><a href="controller/eliminar.php?idp=' + producto.idPro + '"><img src="iconoeliminar.png" width="20" heigth="20"></a></td>' +
+                            '<td><a href="controller/eliminar.php?idp=' + producto.idPro + '"><img src="iconoeliminar.png" width="20" height="20"></a></td>' +
                             '</tr>'
                         );
                     });

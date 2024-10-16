@@ -64,10 +64,13 @@ if (!isset($_SESSION['login'])) {
         echo "<td>" . $fila[2] . "</td>";
         // Aquí añadimos el botón de editar y eliminar
         echo "<td>
-                <button class='btn btn-warning btn-sm' onclick='editarProducto(" . $fila[0] . ")'>Editar</button>
-                <a href='controller/eliminar.php?idp=" . $fila[0] . "'><img src='iconoeliminar.png' width='20' heigth='20'></a>
-              </td>";
+        <button class='btn btn-warning btn-sm' onclick='editarProducto(" . $fila[0] . ")'>Editar</button>
+        <button class='btn-eliminar' data-id='" . $fila[0] . "'>
+            <img src='iconoeliminar.png' width='20' height='20'>
+        </button>
+            </td>";
         echo "</tr>";
+
     }
 
     echo "</tbody> </table>";
@@ -151,5 +154,6 @@ if (!isset($_SESSION['login'])) {
 <script src="js/editar.js"></script>
 <script src="js/buscar.js"></script>
 <script src="js/modificar.js"></script>
+<script src="js/eliminar.js"></script>
 </body>
 </html>
