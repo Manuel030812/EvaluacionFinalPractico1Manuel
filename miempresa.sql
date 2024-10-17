@@ -102,5 +102,5 @@ ADD COLUMN NombreCompleto TEXT;
 
 INSERT INTO tb_usuarios (NomUser, Passwd, NombreCompleto) 
 VALUES ('manuel', 'manuel123', 'Manuel Lopez Gutierrez');
-NSERT INTO tb_usuarios (NomUser, Passwd, NombreCompleto) 
+iNSERT INTO tb_usuarios (NomUser, Passwd, NombreCompleto) 
 VALUES ('admin', 'unach', 'Manuel Lopez Gutierrez');
